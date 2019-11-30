@@ -1,2 +1,2 @@
 # hello-world
-test repository
+Salamat Hesus At Biyernes Ulit!
