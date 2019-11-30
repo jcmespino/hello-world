@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	</head>
+	<body>
+		<h1>My Food Tracker - View Meal</h1>
+		    {% csrf_token %}
+			<table class="table table-bordered table-striped">
+				<tbody>
+					<tr>
+						<th>Food</th>
+						<td>{{ meal.food.name }}</td>
+					</tr>
+					<tr>
+						<th>Serving Size</th>
+						<td>{{ meal.serving_size }}</td>
+					</tr>
+					<tr>
+						<th>Meal Time</th>
+						<td>{{ meal.get_meal_time_display }}</td>
+					</tr>
+					<tr>
+						<th>Total Calories</th>
+						<td>{{ meal.get_total_calories }}</td>
+					</tr>
+					<tr>
+						<th>Total Fat</th>
+						<td>{{ meal.get_total_fat }}</td>
+					</tr>
+					<tr>
+						<th>Saturated Fat</th>
+						<td>{{ meal.get_saturated_fat }}</td>
+					</tr>
+					<tr>
+						<th>Cholesterol</th>
+						<td>{{ meal.get_cholesterol }}</td>
+					</tr>
+					<tr>
+						<th>Sodium</th>
+						<td>{{ meal.get_sodium }}</td>
+					</tr>
+					<tr>
+						<th>Total Carbohydrates</th>
+						<td>{{ meal.get_total_carbohydrate }}</td>
+					</tr>
+					<tr>
+						<th>Sugar</th>
+						<td>{{ meal.get_sugar }}</td>
+					</tr>
+					<tr>
+						<th>Protein</th>
+						<td>{{ meal.get_protein }}</td>
+					</tr>
+				</tbody>
+			</table>
+			<a href="{% url "food:index" %}" class="btn btn-info">Back</a>
+		</form>
+	</body>
+</html>
